@@ -1,0 +1,10 @@
+set rtc_cred = getcredential("Cesar_RTC");
+set dp_cred = getcredential("DataPower_Cred");
+set DP_USER = ${dp_cred.username};
+set DP_PASS = ${dp_cred.password};
+set RTC_USER = ${rtc_cred.username};
+set RTC_PASS = ${rtc_cred.password};
+set descargar = descargar_archivos($RTC_USER,$RTC_PASS,"DataDev","D:\OpenMake\DATAPOWER\Archivos\Desarrollo\${version}","https://lnxsclm0p.unix.banorte.com:9443/ccm","D:\Program Files\IBM\TeamConcert","WS_DESARROLLO",${dominio});
+echo $descargar;
+set subir = subir_DP_bat("D:\OpenMake\DATAPOWER\curl\bin\curl.exe","D:\OpenMake\DATAPOWER\xmls\uploadfile.xml","D:\OpenMake\DATAPOWER\xmls\des_uploadfile.xml","D:\OpenMake\DATAPOWER\Archivos\Desarrollo\${version}\${dominio}\${proyecto}",${dominio},"local:///",$DP_USER,$DP_PASS,"https://lnxsdtp1d.dev.unix.banorte.com:5550/service/mgmt/current");
+echo $subir;

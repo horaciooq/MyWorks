@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OMTarget>
+    <Version>6.3</Version>
+    <Name>Temas_build\IxeResponsivoTheme.war</Name>
+    <Project>ACCESO24_PUBLICO_TEMAS</Project>
+    <TargetDefinitionFile>IxeResponsivoTheme.war.tgt</TargetDefinitionFile>
+    <OSPlatform>Java</OSPlatform>
+    <BuildType>Java War no Compilation</BuildType>
+    <IntDirectory>IxeResponsivoTheme _inter</IntDirectory>
+    <PhoneyTarget>false</PhoneyTarget>
+    <BuildTask>
+        <Name>Ant War</Name>
+        <OptionGroup>
+            <GroupName>Build Task Options</GroupName>
+            <Type>0</Type>
+            <Option>
+                <Flag>basedir=</Flag>
+                <Parameter></Parameter>
+                <Description>Indicates the directory from which to war the files. If it is not used, the files will be warred directly from the build directory.</Description>
+                <Type>90</Type>
+            </Option>
+            <Option>
+                <Flag>compress=</Flag>
+                <Parameter>true</Parameter>
+                <Description>If true, compress the final target .war file.</Description>
+                <Type>90</Type>
+            </Option>
+            <Option>
+                <Flag>manifest=</Flag>
+                <Parameter></Parameter>
+                <Description>The name of the manifest file to use.</Description>
+                <Type>90</Type>
+            </Option>
+            <Option>
+                <Flag>webxml=</Flag>
+                <Parameter></Parameter>
+                <Description>The name of the deployment descriptor for the final target .war file. It is renamed web.xml and placed in the WEB-INF directory.</Description>
+                <Type>91</Type>
+            </Option>
+        </OptionGroup>
+        <OptionGroup>
+            <GroupName>Meta-Inf</GroupName>
+            <Type>0</Type>
+            <Option>
+                <Flag>dir=</Flag>
+                <Parameter></Parameter>
+                <Description>Indicates the directory where the dependencies need to be pulled from. If it is not used, the dependencies will be pulled directly from the build directory.</Description>
+                <Type>90</Type>
+            </Option>
+            <Option>
+                <Flag>prefix=</Flag>
+                <Parameter>META-INF</Parameter>
+                <Description>Ant attribute used to push target the WEB-INF directory in the .war file.</Description>
+                <Type>95</Type>
+            </Option>
+        </OptionGroup>
+        <OptionGroup>
+            <GroupName>Web-Inf</GroupName>
+            <Type>0</Type>
+            <Option>
+                <Flag>dir=</Flag>
+                <Parameter></Parameter>
+                <Description>Indicates the directory where the dependencies need to be pulled from. If it is not used, the dependencies will be pulled directly from the build directory.</Description>
+                <Type>26</Type>
+            </Option>
+            <Option>
+                <Flag>prefix=</Flag>
+                <Parameter>WEB-INF</Parameter>
+                <Description>Ant attribute used to push target the WEB-INF directory in the .war file.</Description>
+                <Type>95</Type>
+            </Option>
+        </OptionGroup>
+        <OptionGroup>
+            <GroupName>Web-Inf Classes</GroupName>
+            <Type>0</Type>
+            <Option>
+                <Flag>dir=</Flag>
+                <Parameter></Parameter>
+                <Description>Indicates the directory where the class files need to be pulled from. If it is not used, the classes will be pulled directly from the build directory.</Description>
+                <Type>90</Type>
+            </Option>
+            <Option>
+                <Flag>prefix=</Flag>
+                <Parameter>WEB-INF/classes</Parameter>
+                <Description>Ant attribute used to push target the WEB-INF/classes directory in the .war file.</Description>
+                <Type>95</Type>
+            </Option>
+        </OptionGroup>
+        <OptionGroup>
+            <GroupName>Web-Inf Lib</GroupName>
+            <Type>0</Type>
+            <Option>
+                <Flag>dir=</Flag>
+                <Parameter></Parameter>
+                <Description>Indicates the directory where the dependencies need to be pulled from. If it is not used, the dependencies will be pulled directly from the build directory.</Description>
+                <Type>90</Type>
+            </Option>
+            <Option>
+                <Flag>prefix=</Flag>
+                <Parameter>WEB-INF/lib</Parameter>
+                <Description>Ant attribute used to push target the WEB-INF directory in the .war file.</Description>
+                <Type>95</Type>
+            </Option>
+        </OptionGroup>
+    </BuildTask>
+    <Dependency>
+        <Name>META-INF\**.*</Name>
+        <Type>37</Type>
+        <ParentBuildTask>Ant War</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>themes\**.*</Name>
+        <Type>37</Type>
+        <ParentBuildTask>Ant War</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>*.xml</Name>
+        <Type>37</Type>
+        <ParentBuildTask>Ant War</ParentBuildTask>
+        <ParentOptionGroup>Web-Inf</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>tld\**.*</Name>
+        <Type>37</Type>
+        <ParentBuildTask>Ant War</ParentBuildTask>
+        <ParentOptionGroup>Web-Inf</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>lib\**.*</Name>
+        <Type>37</Type>
+        <ParentBuildTask>Ant War</ParentBuildTask>
+        <ParentOptionGroup>Web-Inf</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>classes\**.*</Name>
+        <Type>37</Type>
+        <ParentBuildTask>Ant War</ParentBuildTask>
+        <ParentOptionGroup>Web-Inf</ParentOptionGroup>
+    </Dependency>
+</OMTarget>

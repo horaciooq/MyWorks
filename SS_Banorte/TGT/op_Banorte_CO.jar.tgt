@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OMTarget>
+    <Version>6.3</Version>
+    <Name>op_Banorte_build\op_Banorte_CO.jar</Name>
+    <Project>ACCESO24</Project>
+    <TargetDefinitionFile>op_Banorte_CO.jar.tgt</TargetDefinitionFile>
+    <OSPlatform>Java</OSPlatform>
+    <BuildType>Java Jar</BuildType>
+    <IntDirectory>op_Banorte_CO_inter</IntDirectory>
+    <PhoneyTarget>false</PhoneyTarget>
+    <BuildTask>
+        <Name>Set Classpath</Name>
+        <OptionGroup>
+            <GroupName>Build Task Options</GroupName>
+            <Type>0</Type>
+        </OptionGroup>
+    </BuildTask>
+    <BuildTask>
+        <Name>Ant Javac</Name>
+        <OptionGroup>
+            <GroupName>Build Task Options</GroupName>
+            <Type>0</Type>
+            <Option>
+                <Flag>compiler=</Flag>
+                <Parameter>modern</Parameter>
+                <Description>Valid parameters are: modern, classic, jikes, gcj, sj, javac1.2, javac1.3 and javac1.4</Description>
+                <Type>91</Type>
+            </Option>
+            <Option>
+                <Flag>debug=</Flag>
+                <Parameter>true</Parameter>
+                <Description>If true, compile source with debug information.</Description>
+                <Type>82</Type>
+            </Option>
+            <Option>
+                <Flag>destdir=</Flag>
+                <Parameter></Parameter>
+                <Description>Indicates the directory, relative to the build directory, where the class files should be stored. If it is not used, the class files will be stored in the build directory.</Description>
+                <Type>90</Type>
+            </Option>
+        </OptionGroup>
+    </BuildTask>
+    <BuildTask>
+        <Name>Ant Jar</Name>
+        <OptionGroup>
+            <GroupName>Build Task Options</GroupName>
+            <Type>0</Type>
+            <Option>
+                <Flag>basedir=</Flag>
+                <Parameter></Parameter>
+                <Description>Indicates the directory from which to jar the files. If it is not used, the files will be jarred directly from the build directory.</Description>
+                <Type>90</Type>
+            </Option>
+            <Option>
+                <Flag>compress=</Flag>
+                <Parameter>true</Parameter>
+                <Description>If true, compress the JAR file. Defaults to true.</Description>
+                <Type>90</Type>
+            </Option>
+            <Option>
+                <Flag>manifest=</Flag>
+                <Parameter></Parameter>
+                <Description>The name of an existing manifest file to place in the JAR file. If not specified, Ant creates a manifest file indicating the version of Ant used.</Description>
+                <Type>90</Type>
+            </Option>
+        </OptionGroup>
+        <OptionGroup>
+            <GroupName>Compiled Classes</GroupName>
+            <Type>0</Type>
+            <Option>
+                <Flag>dir=</Flag>
+                <Parameter></Parameter>
+                <Description>Indicates the directory where the class files need to be pulled from. If it is not used, the classes will be pulled directly from the build directory.</Description>
+                <Type>90</Type>
+            </Option>
+            <Option>
+                <Flag>prefix=</Flag>
+                <Parameter></Parameter>
+                <Description>Ant attribute used to target a specified directory in the jar file.</Description>
+                <Type>90</Type>
+            </Option>
+        </OptionGroup>
+        <OptionGroup>
+            <GroupName>Meta-Inf</GroupName>
+            <Type>0</Type>
+            <Option>
+                <Flag>dir=</Flag>
+                <Parameter></Parameter>
+                <Description>Indicates the directory where the dependencies need to be pulled from. If it is not used, the dependencies will be pulled directly from the build directory.</Description>
+                <Type>90</Type>
+            </Option>
+            <Option>
+                <Flag>prefix=</Flag>
+                <Parameter>META-INF</Parameter>
+                <Description>Ant attribute used to push target the WEB-INF directory in the .war file.</Description>
+                <Type>95</Type>
+            </Option>
+        </OptionGroup>
+    </BuildTask>
+    <Dependency>
+        <Name>*.jar</Name>
+        <Type>37</Type>
+        <ParentBuildTask>Set Classpath</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>Set Classpath results</Name>
+        <Type>6</Type>
+        <ParentBuildTask>Ant Javac</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>src/**.java</Name>
+        <Type>37</Type>
+        <ParentBuildTask>Ant Javac</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>Ant Javac results</Name>
+        <Type>6</Type>
+        <ParentBuildTask>Ant Jar</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>common/**.*</Name>
+        <Type>37</Type>
+        <ParentBuildTask>Ant Jar</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>definitions/**.*</Name>
+        <Type>5</Type>
+        <ParentBuildTask>Ant Jar</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>soap/**.*</Name>
+        <Type>37</Type>
+        <ParentBuildTask>Ant Jar</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>WSDL/**.*</Name>
+        <Type>5</Type>
+        <ParentBuildTask>Ant Jar</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>.project.noext</Name>
+        <Type>5</Type>
+        <ParentBuildTask>Ant Jar</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>.factorypath.noext</Name>
+        <Type>37</Type>
+        <ParentBuildTask>Ant Jar</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>.location.noext</Name>
+        <Type>5</Type>
+        <ParentBuildTask>Ant Jar</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>.classpath.noext</Name>
+        <Type>37</Type>
+        <ParentBuildTask>Ant Jar</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>xsd2type-mappings.xml</Name>
+        <Type>5</Type>
+        <ParentBuildTask>Ant Jar</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+    <Dependency>
+        <Name>WEB-INF\**.*</Name>
+        <Type>37</Type>
+        <ParentBuildTask>Ant Jar</ParentBuildTask>
+        <ParentOptionGroup>Build Task Options</ParentOptionGroup>
+    </Dependency>
+</OMTarget>
