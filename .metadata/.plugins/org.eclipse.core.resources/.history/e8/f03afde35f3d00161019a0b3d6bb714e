@@ -1,0 +1,11 @@
+my $filename = 'C:\Users\SMARTSOL 20\Desktop\Cobol\VPBMP953';
+open(my $fh,">> $filename")
+  or die "Could not open file '$filename' $!";
+ print print $fh "hello";
+while (my $row = <$fh>) {
+  chomp $row;
+  substr($row,0,6,"      ");
+  print "$row\n";
+  print $fh "$row";
+
+}

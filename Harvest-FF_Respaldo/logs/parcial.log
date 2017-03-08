@@ -1,0 +1,152 @@
+2015/08/11 16:14:48 INFO Iniciando Escaneo Usuario: harvest Proyecto: APOLO_B Paquete: APLB.15.08.06.1038 
+2015/08/11 16:16:14 INFO Iniciando Escaneo Usuario: harvest Proyecto: APOLO_B Paquete: APLB.15.08.06.1038 
+2015/08/11 16:16:18 INFO Descarga de Archvos Finalizada Proyecto: APOLO_B Paquete: APLB.15.08.06.1038
+hco -b svrtransferad -en "APOLO_B" -st Desarrollo -cp "C:\Harvest-FF\run\harvest" -op pc -vp \ -br -replace all -bo  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm 15.128.27.82 -rport 1576 -er C:\Harvest-FF\dfo\remoto.dfo -s "*" -pf APLB.15.08.06.1038 -po 
+2015/08/11 16:16:57 INFO Iniciando Escaneo Usuario: harvest Proyecto: APOLO_B Paquete: APLB.15.08.06.1038 
+2015/08/11 16:17:01 ERROR Imposible realizar la descarga revisar el comando ejecutado
+hco -b svrtransferad -en "APOLO_B" -st Desarrollo -cp "C:\Harvest-FF\run\harvest" -op pc -vp \ -br -replace all -bo  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm 15.157.31.220 -rport 1576 -er C:\Harvest-FF\dfo\remoto.dfo -s "*" -pf APLB.15.08.06.1038 -po 
+2015/08/11 16:18:47 INFO Iniciando Escaneo Usuario: harvest Proyecto: APOLO_B Paquete: APLB.15.08.06.1038 
+2015/08/11 16:18:50 ERROR Imposible realizar la descarga revisar el comando ejecutado
+hco -b svrtransferad -en "APOLO_B" -st Desarrollo -cp "C:\Harvest-FF\run\harvest" -op pc -vp \ -br -replace all -bo  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm 15.157.31.220 -rport 1576 -er C:\Harvest-FF\dfo\remoto.dfo -s "*" -pf APLB.15.08.06.1038 -po 
+2015/08/11 16:19:34 INFO Iniciando Escaneo Usuario: harvest Proyecto: APOLO_B Paquete: APLB.15.08.06.1038 
+2015/08/11 16:19:36 ERROR Imposible realizar la descarga revisar el comando ejecutado
+hco -b svrtransferad -en "APOLO_B" -st Desarrollo -cp "C:\Harvest-FF\run\harvest" -op pc -vp \ -br -replace all -bo  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm 15.157.31.220 -rport 1576 -er C:\Harvest-FF\dfo\remoto.dfo -s "*" -pf APLB.15.08.06.1038 -po 
+2015/08/11 16:20:31 INFO Iniciando Escaneo Usuario: harvest Proyecto: APOLO_B Paquete: APLB.15.08.06.1038 
+2015/08/11 16:20:34 INFO Descarga de Archvos Finalizada Proyecto: APOLO_B Paquete: APLB.15.08.06.1038
+hco -b svrtransferad -en "APOLO_B" -st Desarrollo -cp "C:\Harvest-FF\run\harvest" -op pc -vp \ -br -replace all -bo  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm 15.157.31.220 -rport 1576 -er C:\Harvest-FF\dfo\remoto.dfo -s "*" -pf APLB.15.08.06.1038 -po 
+2015/08/11 16:20:47 INFO Limpieza del build APOLO_Bterminada
+sourceanalyzer -b "APOLO_B" -clean 
+2015/08/11 16:21:02 INFO Traduccion de APOLO_B Realizada con exito
+sourceanalyzer -64 -Xmx6120M -Xss512K -b "APOLO_B" "C:\Harvest-FF\run\harvest\APOLO_B" 
+2015/08/11 16:22:20 INFO El escaneoAPOLO_B ha finalizado con exito
+sourceanalyzer -64 -Xmx6120M -Xss512K -b "APOLO_B" -scan -f "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 16:22:21 ERROR No se pudo crear el archivo xml
+ReportGenerator -format xml -template harvest.xml -f "C:\Harvest-FF\run\harvest\APOLO_B\results.xml" -source "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 16:24:23 INFO Iniciando Escaneo Usuario: harvest Proyecto: APOLO_B Paquete: APLB.15.08.06.1038 
+2015/08/11 16:24:26 INFO Descarga de Archvos Finalizada Proyecto: APOLO_B Paquete: APLB.15.08.06.1038
+hco -b svrtransferad -en "APOLO_B" -st Desarrollo -cp "C:\Harvest-FF\run\harvest" -op pc -vp \ -br -replace all -bo  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm 15.157.31.220 -rport 1576 -er C:\Harvest-FF\dfo\remoto.dfo -s "*" -pf APLB.15.08.06.1038 -po 
+2015/08/11 16:24:28 INFO Limpieza del build APOLO_Bterminada
+sourceanalyzer -b "APOLO_B" -clean 
+2015/08/11 16:24:41 INFO Traduccion de APOLO_B Realizada con exito
+sourceanalyzer -64 -Xmx6120M -Xss512K -b "APOLO_B" "C:\Harvest-FF\run\harvest\APOLO_B" 
+2015/08/11 16:25:56 INFO El escaneoAPOLO_B ha finalizado con exito
+sourceanalyzer -64 -Xmx6120M -Xss512K -b "APOLO_B" -scan -f "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 16:26:14 INFO results.xml creado con exito
+ReportGenerator -format xml -template harvest.xml -f "C:\Harvest-FF\run\harvest\APOLO_B\results.xml" -source "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 16:26:35 INFO results.pdf creado con exito
+ReportGenerator -format pdf -template harvest.xml -f "C:\Harvest-FF\run\harvest\APOLO_B\results.pdf" -source "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 16:26:47 INFO Carga de resultados a SSC completa
+fortifyclient -url "http://15.128.27.55/ssc" -authtoken "2a7753b6-c64b-41c0-a725-0e92e6424721" uploadFPR -file "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" -project "APOLO_B" -version "Parcial" 
+2015/08/11 16:27:16 ERROR No se pudo realizar la verificacion revisar verificar.log
+java -jar C:\Harvest-FF\lib\Validador_de_resultados_Beta.jar C:\Harvest-FF\run\harvest\ APOLO_B Completo Parcial APLB.15.08.06.1038 horacio.ochoa_smarts@banorte.com 
+2015/08/11 16:59:49 INFO Iniciando Escaneo Usuario: harvest Proyecto: APOLO_B Paquete: APLB.15.08.06.1038 
+2015/08/11 16:59:53 INFO Descarga de Archvos Finalizada Proyecto: APOLO_B Paquete: APLB.15.08.06.1038
+hco -b svrtransferad -en "APOLO_B" -st Desarrollo -cp "C:\Harvest-FF\run\harvest" -op pc -vp \ -br -replace all -bo  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm 15.157.31.220 -rport 1576 -er C:\Harvest-FF\dfo\remoto.dfo -s "*" -pf APLB.15.08.06.1038 -po 
+2015/08/11 16:59:55 INFO Limpieza del build APOLO_Bterminada
+sourceanalyzer -b "APOLO_B" -clean 
+2015/08/11 17:00:08 INFO Traduccion de APOLO_B Realizada con exito
+sourceanalyzer -64 -Xmx6120M -Xss512K -b "APOLO_B" "C:\Harvest-FF\run\harvest\APOLO_B" 
+2015/08/11 17:01:21 INFO El escaneoAPOLO_B ha finalizado con exito
+sourceanalyzer -64 -Xmx6120M -Xss512K -b "APOLO_B" -scan -f "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 17:01:35 INFO results.xml creado con exito
+ReportGenerator -format xml -template harvest.xml -f "C:\Harvest-FF\run\harvest\APOLO_B\results.xml" -source "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 17:01:52 INFO results.pdf creado con exito
+ReportGenerator -format pdf -template harvest.xml -f "C:\Harvest-FF\run\harvest\APOLO_B\results.pdf" -source "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 17:01:59 INFO Carga de resultados a SSC completa
+fortifyclient -url "http://15.128.27.55/ssc" -authtoken "2a7753b6-c64b-41c0-a725-0e92e6424721" uploadFPR -file "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" -project "APOLO_B" -version "Parcial" 
+2015/08/11 17:02:15 ERROR No se pudo realizar la verificacion revisar verificar.log
+java -jar C:\Harvest-FF\lib\Validador_de_resultados_Beta.jar C:\Harvest-FF\run\harvest\ APOLO_B Completo Parcial APLB.15.08.06.1038 horacio.ochoa_smarts@banorte.com 
+2015/08/11 17:06:19 INFO Iniciando Escaneo Usuario: harvest Proyecto: APOLO_B Paquete: APLB.15.08.06.1038 
+2015/08/11 17:06:23 INFO Descarga de Archvos Finalizada Proyecto: APOLO_B Paquete: APLB.15.08.06.1038
+hco -b svrtransferad -en "APOLO_B" -st Desarrollo -cp "C:\Harvest-FF\run\harvest" -op pc -vp \ -br -replace all -bo  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm 15.157.31.220 -rport 1576 -er C:\Harvest-FF\dfo\remoto.dfo -s "*" -pf APLB.15.08.06.1038 -po 
+2015/08/11 17:06:26 INFO Limpieza del build APOLO_Bterminada
+sourceanalyzer -b "APOLO_B" -clean 
+2015/08/11 17:06:40 INFO Traduccion de APOLO_B Realizada con exito
+sourceanalyzer -64 -Xmx6120M -Xss512K -b "APOLO_B" "C:\Harvest-FF\run\harvest\APOLO_B" 
+2015/08/11 17:07:54 INFO El escaneoAPOLO_B ha finalizado con exito
+sourceanalyzer -64 -Xmx6120M -Xss512K -b "APOLO_B" -scan -f "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 17:08:07 INFO results.xml creado con exito
+ReportGenerator -format xml -template harvest.xml -f "C:\Harvest-FF\run\harvest\APOLO_B\results.xml" -source "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 17:08:24 INFO results.pdf creado con exito
+ReportGenerator -format pdf -template harvest.xml -f "C:\Harvest-FF\run\harvest\APOLO_B\results.pdf" -source "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 17:08:32 INFO Carga de resultados a SSC completa
+fortifyclient -url "http://15.128.27.55/ssc" -authtoken "2a7753b6-c64b-41c0-a725-0e92e6424721" uploadFPR -file "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" -project "APOLO_B" -version "Parcial" 
+2015/08/11 17:08:43 ERROR No se pudo realizar la verificacion revisar verificar.log
+java -jar C:\Harvest-FF\lib\Validador_de_resultados_Beta.jar C:\Harvest-FF\run\harvest\ APOLO_B Completo Parcial APLB.15.08.06.1038 horacio.ochoa_smarts@banorte.com 
+2015/08/11 17:11:54 INFO Iniciando Escaneo Usuario: harvest Proyecto: APOLO_B Paquete: APLB.15.08.06.1038 
+2015/08/11 17:11:57 INFO Descarga de Archvos Finalizada Proyecto: APOLO_B Paquete: APLB.15.08.06.1038
+hco -b svrtransferad -en "APOLO_B" -st Desarrollo -cp "C:\Harvest-FF\run\harvest" -op pc -vp \ -br -replace all -bo  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm 15.157.31.220 -rport 1576 -er C:\Harvest-FF\dfo\remoto.dfo -s "*" -pf APLB.15.08.06.1038 -po 
+2015/08/11 17:11:59 INFO Limpieza del build APOLO_Bterminada
+sourceanalyzer -b "APOLO_B" -clean 
+2015/08/11 17:12:13 INFO Traduccion de APOLO_B Realizada con exito
+sourceanalyzer -64 -Xmx6120M -Xss512K -b "APOLO_B" "C:\Harvest-FF\run\harvest\APOLO_B" 
+2015/08/11 17:13:25 INFO El escaneoAPOLO_B ha finalizado con exito
+sourceanalyzer -64 -Xmx6120M -Xss512K -b "APOLO_B" -scan -f "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 17:13:40 INFO results.xml creado con exito
+ReportGenerator -format xml -template harvest.xml -f "C:\Harvest-FF\run\harvest\APOLO_B\results.xml" -source "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 17:13:57 INFO results.pdf creado con exito
+ReportGenerator -format pdf -template harvest.xml -f "C:\Harvest-FF\run\harvest\APOLO_B\results.pdf" -source "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 17:14:04 INFO Carga de resultados a SSC completa
+fortifyclient -url "http://15.128.27.55/ssc" -authtoken "2a7753b6-c64b-41c0-a725-0e92e6424721" uploadFPR -file "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" -project "APOLO_B" -version "Parcial" 
+2015/08/11 17:14:16 ERROR No se pudo realizar la verificacion revisar verificar.log
+java -jar C:\Harvest-FF\lib\Validador_de_resultados_Beta.jar C:\Harvest-FF\run\harvest\ APOLO_B Completo Parcial APLB.15.08.06.1038 horacio.ochoa_smarts@banorte.com 
+2015/08/11 17:18:00 INFO Iniciando Escaneo Usuario: harvest Proyecto: APOLO_B Paquete: APLB.15.08.06.1038 
+2015/08/11 17:18:04 INFO Descarga de Archvos Finalizada Proyecto: APOLO_B Paquete: APLB.15.08.06.1038
+hco -b svrtransferad -en "APOLO_B" -st Desarrollo -cp "C:\Harvest-FF\run\harvest" -op pc -vp \ -br -replace all -bo  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm 15.157.31.220 -rport 1576 -er C:\Harvest-FF\dfo\remoto.dfo -s "*" -pf APLB.15.08.06.1038 -po 
+2015/08/11 17:18:06 INFO Limpieza del build APOLO_Bterminada
+sourceanalyzer -b "APOLO_B" -clean 
+2015/08/11 17:18:19 INFO Traduccion de APOLO_B Realizada con exito
+sourceanalyzer -64 -Xmx6120M -Xss512K -b "APOLO_B" "C:\Harvest-FF\run\harvest\APOLO_B" 
+2015/08/11 17:19:31 INFO El escaneoAPOLO_B ha finalizado con exito
+sourceanalyzer -64 -Xmx6120M -Xss512K -b "APOLO_B" -scan -f "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 17:19:45 INFO results.xml creado con exito
+ReportGenerator -format xml -template harvest.xml -f "C:\Harvest-FF\run\harvest\APOLO_B\results.xml" -source "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 17:20:04 INFO results.pdf creado con exito
+ReportGenerator -format pdf -template harvest.xml -f "C:\Harvest-FF\run\harvest\APOLO_B\results.pdf" -source "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" 
+2015/08/11 17:20:11 INFO Carga de resultados a SSC completa
+fortifyclient -url "http://15.128.27.55/ssc" -authtoken "2a7753b6-c64b-41c0-a725-0e92e6424721" uploadFPR -file "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" -project "APOLO_B" -version "Parcial" 
+2015/08/11 17:20:24 INFO Verificacion completada sin errores
+java -jar C:\Harvest-FF\lib\Validador_de_resultados_Beta.jar C:\Harvest-FF\run\harvest\ APOLO_B Completo Parcial APLB.15.08.06.1038 horacio.ochoa_smarts@banorte.com 
+2015/08/11 17:20:24 INFO respaldo generado sin errores
+Copy "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" "C:\Harvest-FF\FPRS\APOLO_B20150811221759.fpr" 
+2015/08/11 17:20:24 INFO archivos eliminados
+C:\Harvest-FF\lib\DelTree.cmd "C:\Harvest-FF\run\harvest" 
+2015/08/24 12:56:26 INFO Iniciando Escaneo Usuario: harvest Proyecto: TELESOFT_B Paquete: TLSB.15.07.13.1724 
+2015/08/24 12:56:55 ERROR Imposible realizar la descarga completa revisar el comando ejecutado
+hco -b svrtransferad -en TELESOFT_B -st Desarrollo -cp "C:\Harvest-FF\run\harvest" -op pc -vp \ -br -replace all -to  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm 15.157.31.220 -rport 1576 -er C:\Harvest-FF\dfo\remoto.dfo -s "*" 
+2015/08/24 12:58:10 INFO Iniciando Escaneo Usuario: harvest Proyecto: TELESOFT_B Paquete: TLSB.15.07.13.1724 
+2015/08/24 13:00:23 ERROR Imposible realizar la descarga completa revisar el comando ejecutado
+hco -b svrtransferad -en TELESOFT_B -st Desarrollo -cp "C:\Harvest-FF\run\harvest" -op pc -vp \ -br -replace all -to  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm 15.157.9.71 -rport 1576 -er C:\Harvest-FF\dfo\remoto.dfo -s "*" 
+2015/08/24 13:37:19 INFO Iniciando Escaneo Usuario: harvest Proyecto: TELESOFT_B Paquete: TLSB.15.07.13.1724 
+2015/08/24 13:42:37 INFO Iniciando Escaneo Usuario: harvest Proyecto: TELESOFT_B Paquete: TLSB.15.07.13.1724 
+2015/08/24 15:18:55 INFO Iniciando Escaneo Usuario: harvest Proyecto: TELESOFT_B Paquete: TLSB.15.07.13.1724 
+2015/08/24 15:21:06 INFO archivos eliminados
+C:\Harvest-FF\lib\DelTree.cmd "C:\Harvest-FF\run\harvest" 
+2015/08/24 15:43:53 INFO Iniciando Escaneo Usuario: harvest Proyecto: TELESOFT_B Paquete: TLSB.15.07.13.1724 
+2015/08/24 15:46:03 INFO Permisos cambiados conexito
+attrib -r "C:\Harvest-FF\run\harvest\TELESOFT_B\*.*" /s 
+2015/08/24 15:53:17 INFO Iniciando Escaneo Usuario: harvest Proyecto: TELESOFT_B Paquete: TLSB.15.07.13.1724 
+2015/08/24 16:00:30 INFO Iniciando Escaneo Usuario: harvest Proyecto: TELESOFT_B Paquete: TLSB.15.07.13.1724 
+2015/08/24 16:31:58 INFO Iniciando Escaneo Usuario: harvest Proyecto: TELESOFT_B Paquete: TLSB.15.07.13.1724 
+2015/08/24 16:33:49 INFO Permisos cambiados conexito
+attrib -r "C:\Harvest-FF\run\harvest\TELESOFT_B\*.*" /s 
+2015/08/25 10:47:52 INFO Iniciando Escaneo Usuario: harvest Proyecto: TELESOFT_B Paquete: TLSB.15.07.13.1724 
+2015/08/25 10:53:04 INFO Permisos cambiados conexito
+attrib -r "C:\Harvest-FF\run\harvest\TELESOFT_B\*.*" /s 
+2015/11/03 17:36:43 INFO Iniciando Escaneo Usuario:  Proyecto:  Paquete:  
+2015/11/03 17:38:49 INFO Iniciando Escaneo Usuario:  Proyecto:  Paquete:  
+2015/11/03 17:39:34 INFO Iniciando Escaneo Usuario:  Proyecto:  Paquete:  
+2015/11/03 17:42:24 INFO Iniciando Escaneo Usuario: PBEC.15.11.03.1334 Proyecto:  Paquete:  
+2015/11/03 17:43:49 INFO Iniciando Escaneo Usuario: FTFYBNTE Proyecto:  Paquete:  
+2015/11/03 17:44:38 INFO Iniciando Escaneo Usuario: FTFYBNTE Proyecto:  Paquete:  
+2015/11/03 17:46:25 INFO Iniciando Escaneo Usuario: FTFYBNTE Proyecto:  Paquete:  
+2015/11/03 17:47:18 INFO Iniciando Escaneo Usuario: FTFYBNTE Proyecto:  Paquete:  
+2015/11/03 17:47:18 ERROR Imposible realizar la descarga completa revisar el comando ejecutado
+hco -b  -en  -st Desarrollo -cp "C:\Harvest-FF\run\FTFYBNTE" -op pc -vp \ -br -replace all -to  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm  -rport  -er C:\Harvest-FF\dfo\remoto.dfo -s "*" 
+2015/11/03 17:49:27 INFO Iniciando Escaneo Usuario: FTFYBNTE Proyecto:  Paquete:  
+2015/11/03 17:49:30 ERROR  
+2015/11/03 17:55:19 INFO Iniciando Escaneo Usuario: FTFYBNTE Proyecto:  Paquete:  
+2015/11/03 17:55:22 ERROR este error 
+2015/11/03 17:56:54 INFO Iniciando Escaneo Usuario: FTFYBNTE Proyecto:  Paquete:  
+2015/11/06 15:53:16 INFO Iniciando Escaneo Usuario: FTFYBNTE Proyecto: usd_BEC_B Paquete: PBEC.15.11.03.1334 
+2015/11/06 15:54:03 INFO Iniciando Escaneo Usuario: FTFYBNTE Proyecto: usd_BEC_B Paquete: PBEC.15.11.03.1334 

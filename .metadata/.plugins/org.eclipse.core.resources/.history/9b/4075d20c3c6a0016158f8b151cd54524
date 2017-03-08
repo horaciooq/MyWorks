@@ -1,0 +1,97 @@
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
+public class simplemail  {	
+	private static Logger LOGGER = Logger.getLogger(simplemail.class);
+	
+	public void SendMail(String mensaje, String archivo, String To) {
+		Properties proplog = new Properties();
+		   File i =new File("C:\\Harvest-FF\\config\\log4j.properties");
+		   InputStream is = null;
+		   
+		   try {
+			    is= new FileInputStream(i);
+			   proplog.load(is);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			finally {
+			    try {
+			        is.close();
+			    }
+			    catch (Exception e) {
+			        // ignore this exception
+			    }
+			}
+	      
+		   PropertyConfigurator.configure(proplog);
+	    
+	    //Codigo para es servidor de banorte de cprreos  
+		String Subject="Reporte Fortify";
+        Properties props = new Properties();
+        props.put("mail.smtp.host", "15.128.4.37");
+        props.put("mail.smtp.port", "25");
+        Session session = Session.getInstance(props);
+        
+        /*String Username="horaciooq@yahoo.com.mx";
+		final String PassWord="Xeon2015?";
+		String Subject="test";
+        Properties props = new Properties();
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", "smtp.mail.yahoo.com");
+        props.put("mail.smtp.port", "587");
+
+        Session session = Session.getInstance(props,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(Username, PassWord);
+                    }
+                });*/
+
+        try {
+
+        	Message message = new MimeMessage(session);
+			//message.setFrom(new InternetAddress("horaciooq@yahoo.com.mx"));
+			message.setFrom(new InternetAddress("Fortify@banorte.com"));
+			message.setRecipients(Message.RecipientType.TO,
+				InternetAddress.parse(To));
+			message.setSubject(Subject);
+			BodyPart cuerpoMensaje = new MimeBodyPart();
+			cuerpoMensaje.setContent(mensaje, "text/html");
+			Multipart multiparte = new MimeMultipart();
+			multiparte.addBodyPart(cuerpoMensaje);
+			cuerpoMensaje = new MimeBodyPart();
+	        String nombreArchivo = archivo;
+	        DataSource fuente = new FileDataSource(nombreArchivo);
+	        cuerpoMensaje.setDataHandler(new DataHandler(fuente));
+	        cuerpoMensaje.setFileName("results.pdf");
+	        multiparte.addBodyPart(cuerpoMensaje);
+	        message.setContent(multiparte);
+			Transport.send(message);
+ 
+			LOGGER.info("Terminado");
+
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+}

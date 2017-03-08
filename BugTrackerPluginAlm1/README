@@ -1,0 +1,37 @@
+HP Fortify Software Security Center Extension Sample : ALM Defect Tracking Integration
+
+
+-------------
+ABOUT
+-------------
+This sample demonstrates an implementation of the Bug Tracker interface for HP Fortify Software Security Center (SSC).
+The interface exists as an extension point to allow end users to customize the integration between SSC
+and defect tracking systems.  This allows for users to use the GUI to easily push the found defects into the
+an external defect tracking system.
+
+The sample implementation provides an example of how the defect tracking can be performed by delegating the
+request to the server, from there the server makes the appropriate calls to the external defect tracking
+systems.
+
+
+-------------
+REQUIREMENTS
+-------------
+
+Building the sample extension requires JDK 1.5, available from Sun, and Apache ant version 1.7 or newer.
+
+
+-------------
+BUILDING
+-------------
+
+To build the sample, simply run
+
+> ant build
+
+-------------
+DEPLOYING
+-------------
+
+Copy the resulting alm-bug-tracker-plugin.jar into WEB-INF/lib of the ssc.war file.
+

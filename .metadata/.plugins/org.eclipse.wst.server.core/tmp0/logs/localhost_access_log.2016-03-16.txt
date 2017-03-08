@@ -1,0 +1,17 @@
+127.0.0.1 - - [16/Mar/2016:13:23:39 -0600] "GET / HTTP/1.1" 404 1004
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:23:43 -0600] "GET /pruebasseguridad/xssreflejado.jsp HTTP/1.1" 200 308
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:25:01 -0600] "GET /pruebasseguridad/xssreflejado.jsp?nom=jose HTTP/1.1" 200 308
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:25:23 -0600] "GET /pruebasseguridad/xssreflejado.jsp?nom=<script>alert("error")</script> HTTP/1.1" 200 335
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:28:13 -0600] "GET / HTTP/1.1" 404 1004
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:28:14 -0600] "GET /favicon.ico HTTP/1.1" 404 1026
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:28:24 -0600] "GET /pruebasseguridad/xssreflejado.jsp HTTP/1.1" 200 308
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:28:44 -0600] "GET /pruebasseguridad/xssreflejado.jsp?nom=Francisco HTTP/1.1" 200 313
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:29:19 -0600] "GET /pruebasseguridad/xssreflejado.jsp?nom=%3Cscript%3Ealert(%22error%22)%3C/script%3E HTTP/1.1" 200 335
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:30:25 -0600] "GET /pruebasseguridad/xssreflejado.jsp?nom=<script>alert("error")</script> HTTP/1.1" 200 335
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:31:03 -0600] "GET /pruebasseguridad/xssreflejado.jsp?nom=%3Cscript%3Ealert(%22error%22)%3C/script%3E HTTP/1.1" 200 335
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:31:30 -0600] "GET /pruebasseguridad/xssreflejado.jsp?nom=<script>alert("error")</script> HTTP/1.1" 200 335
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:32:14 -0600] "GET /pruebasseguridad/xssreflejado.jsp?nom=Francisco HTTP/1.1" 200 313
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:33:09 -0600] "GET /pruebasseguridad/xssreflejado.jsp?nom=<a%20href="google.com">Francisco</a> HTTP/1.1" 200 338
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:33:16 -0600] "GET /pruebasseguridad/google.com HTTP/1.1" 404 1058
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:33:32 -0600] "GET /pruebasseguridad/xssreflejado.jsp?nom=<a%20href="http://google.com">Francisco</a> HTTP/1.1" 200 345
+0:0:0:0:0:0:0:1 - - [16/Mar/2016:13:34:14 -0600] "GET /pruebasseguridad/xssreflejado.jsp?nom=<p>hola%20esto%20es%20XSS</p><br><a%20href="http://google.com">Francisco</a> HTTP/1.1" 200 372

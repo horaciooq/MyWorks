@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="header.jsp" %>
+
+<%
+	boolean found = false;
+	String quote = "Change the URL to access other files...";
+	if(request.getAttribute("user") != null){
+		found = true;
+		quote = request.getAttribute("user").toString();
+	} 
+	String href="?function=ObjectReference&insecure&user=";
+%>
+
+<h2>Exercise: Insecure Object Reference</h2>
+<table width="30%" border="1">
+<tr><th width="50%">List of Users</th></tr>
+<tr><td><a href="<%=href + session.getAttribute("do0") %>"><%=session.getAttribute("do0") %></a></td></tr>
+<tr><td><a href="<%=href + session.getAttribute("do1") %>"><%=session.getAttribute("do1") %></a></td></tr> 
+<tr><td><a href="<%=href + session.getAttribute("do2") %>"><%=session.getAttribute("do2") %></a></td></tr> 
+<tr><td><a href="<%=href + session.getAttribute("do3") %>"><%=session.getAttribute("do3") %></a></td></tr> 
+<tr><td><a href="<%=href + session.getAttribute("do4") %>"><%=session.getAttribute("do4") %></a></td></tr> 
+<tr><td><a href="<%=href + session.getAttribute("do5") %>"><%=session.getAttribute("do5") %></a></td></tr> 
+<tr><td><a href="<%=href + session.getAttribute("do6") %>"><%=session.getAttribute("do6") %></a></td></tr> 
+<tr><td><a href="<%=href + session.getAttribute("do7") %>"><%=session.getAttribute("do7") %></a></td></tr> 
+<tr><td><a href="<%=href + session.getAttribute("do8") %>"><%=session.getAttribute("do8") %></a></td></tr> 
+<tr><td><a href="<%=href + session.getAttribute("do9") %>"><%=session.getAttribute("do9") %></a></td></tr> 
+<tr><td><a href="<%=href + session.getAttribute("do10") %>"><%=session.getAttribute("do10") %></a></td></tr>
+</table>
+<br />  
+<% if(found){ %>User's message:  <br /><p style="color: red"><%} %><%=quote %></p><br />
+
+<%@include file="footer.jsp" %>

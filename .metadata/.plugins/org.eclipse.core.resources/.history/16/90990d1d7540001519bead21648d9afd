@@ -1,0 +1,77 @@
+
+import java.util.Properties;
+
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+
+import java.util.logging.ConsoleHandler;
+import java.util.logging.Handler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+public class simplemail  {	
+	public void SendMail(String mensaje, String archivo, String To) {
+		Logger logger = Logger.getLogger("MyLog");
+		ConsoleHandler ch;
+		ch = new ConsoleHandler();
+	    logger.addHandler(ch);
+		SimpleFormatter formatter = new SimpleFormatter();
+	    ch.setFormatter(formatter);
+	    
+	    //Codigo para es servidor de banorte de cprreos  
+		/*String Subject="Reporte Fortify";
+        Properties props = new Properties();
+        props.put("mail.smtp.host", "15.128.4.37");
+        props.put("mail.smtp.port", "25");
+        Session session = Session.getInstance(props);*/
+		
+		final String Username="horaciooq@yahoo.com.mx";
+		final String PassWord="Xeon2015?";
+		String Subject="test";
+        Properties props = new Properties();
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", "smtp.mail.yahoo.com");
+        props.put("mail.smtp.port", "587");
+
+        Session session = Session.getInstance(props,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(Username, PassWord);
+                    }
+                });
+
+        try {
+
+        	Message message = new MimeMessage(session);
+			message.setFrom(new InternetAddress("hochoa@yahoo.com.mx"));
+			message.setRecipients(Message.RecipientType.TO,
+				InternetAddress.parse(To));
+			message.setSubject(Subject);
+			BodyPart cuerpoMensaje = new MimeBodyPart();
+			cuerpoMensaje.setContent(mensaje, "text/html");
+			Multipart multiparte = new MimeMultipart();
+			multiparte.addBodyPart(cuerpoMensaje);
+			cuerpoMensaje = new MimeBodyPart();
+	        String nombreArchivo = archivo;
+	        DataSource fuente = new FileDataSource(nombreArchivo);
+	        cuerpoMensaje.setDataHandler(new DataHandler(fuente));
+	        cuerpoMensaje.setFileName("results.pdf");
+	        multiparte.addBodyPart(cuerpoMensaje);
+	        message.setContent(multiparte);
+			Transport.send(message);
+ 
+			logger.info("Done");
+
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+}

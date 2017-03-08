@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/MyService/src/com/serviceexample/MyService.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.serviceexample.MyService"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-b PEM -p PSAE.15.09.28.1813 -f Aprobado -u FTFYBNTE -pw horacio"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="MyService"/>
+</launchConfiguration>

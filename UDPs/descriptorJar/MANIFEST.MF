@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: jhsdk.jar
+Main-Class: com.ca.harvest.udp.Main
+
+

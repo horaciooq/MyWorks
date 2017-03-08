@@ -1,0 +1,62 @@
+package com.ss.ssc;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Properties;
+import java.util.Scanner;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
+import com.ca.harvest.jhsdk.hutils.JCaHarvestException;
+
+
+public class principal {
+
+	//private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+	private static Logger LOGGER = Logger.getLogger(principal.class);
+	public static void main(String[] args) {
+		int conteovulnerabilidades=0;
+		int conteofalsospositivos=0;
+		String cataux="";
+		String archivoxml=args[0]+"\\results.xml";
+		lecturaresultados lr =new lecturaresultados();
+		Object [] obj=lr.getResults(archivoxml, args[1], args[2],args[3]);
+		ArrayList categorias = (ArrayList) obj[0];
+		ArrayList vulnerabilidades = (ArrayList) obj[1];
+		  for(int X=0; X<vulnerabilidades.size();X++){
+				Vulnerabilidad vul =(Vulnerabilidad) vulnerabilidades.get(X);
+				if (vul.getEstado().equals("Updated")){
+					conteovulnerabilidades++;
+					if(vul.getAudit().equals("Not an Issue") && !vul.getComentario().equals("") && vul.getComentario()!=null){
+					conteofalsospositivos++;
+					}
+					
+									
+				}
+			}
+		  System.out.println(conteovulnerabilidades);
+		/*try {
+			harvestform hf= new harvestform();
+			if(conteovulnerabilidades!=0){
+				simple.SendMail(mensaje, adjunto, args[5]);					
+				if(conteofalsospositivos==conteovulnerabilidades){	
+					
+					hf.modificaForm(args[4], "Aprobado");
+				}else{
+					hf.modificaForm(args[4], "No Aprobado");
+				}
+				
+			}else{
+				hf.modificaForm(args[4], "Aprobado");
+				simple.SendMail(NoVulnerabilidades, adjunto, args[5]);
+			}
+		} catch (JCaHarvestException e) {
+			// TODO Auto-generated catch block
+			LOGGER.warn(e.getMessage());
+		}*/
+		
+	}
+}

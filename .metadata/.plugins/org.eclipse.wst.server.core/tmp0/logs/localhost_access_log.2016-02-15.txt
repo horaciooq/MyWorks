@@ -1,0 +1,5 @@
+127.0.0.1 - - [15/Feb/2016:15:04:55 -0600] "GET / HTTP/1.1" 404 1004
+0:0:0:0:0:0:0:1 - - [15/Feb/2016:15:04:57 -0600] "GET /pruebasseguridad/pathmanipulation.jsp HTTP/1.1" 200 333
+0:0:0:0:0:0:0:1 - - [15/Feb/2016:15:05:02 -0600] "GET /pruebasseguridad/pathmanipulation.jsp HTTP/1.1" 200 333
+0:0:0:0:0:0:0:1 - - [15/Feb/2016:15:05:27 -0600] "GET /pruebasseguridad/pathmanipulation.jsp?nombre=Reporte.txt HTTP/1.1" 200 340
+0:0:0:0:0:0:0:1 - - [15/Feb/2016:15:18:42 -0600] "GET /pruebasseguridad/pathmanipulation.jsp?nombre=..\Reporte.txt HTTP/1.1" 200 266

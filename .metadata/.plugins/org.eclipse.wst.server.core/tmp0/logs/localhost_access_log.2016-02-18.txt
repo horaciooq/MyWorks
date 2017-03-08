@@ -1,0 +1,4 @@
+127.0.0.1 - - [18/Feb/2016:17:14:10 -0600] "GET / HTTP/1.1" 404 1004
+0:0:0:0:0:0:0:1 - - [18/Feb/2016:17:14:16 -0600] "GET /pruebasseguridad/sqlinjection.jsp HTTP/1.1" 500 7784
+0:0:0:0:0:0:0:1 - - [18/Feb/2016:17:48:06 -0600] "GET /pruebasseguridad/sqlinjection.jsp HTTP/1.1" 500 7784
+0:0:0:0:0:0:0:1 - - [18/Feb/2016:17:48:07 -0600] "GET /favicon.ico HTTP/1.1" 404 1026

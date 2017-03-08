@@ -1,0 +1,8 @@
+INDEX VERSION 1.3+C:\Users\SMARTSOL 20\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2852234363.index
+2786106897.index
+1163421100.index
+581765717.index
+2222681941.index
+3632019978.index
+2142066546.index

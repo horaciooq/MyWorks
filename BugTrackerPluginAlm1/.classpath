@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/aspectjlib-1.5.4.jar"/>
+	<classpathentry kind="lib" path="lib/aspectjrt-1.5.4.jar"/>
+	<classpathentry kind="lib" path="lib/aspectjtools-1.5.4.jar"/>
+	<classpathentry kind="lib" path="lib/aspectjweaver-1.5.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-adapters-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/fortify-public-4.21.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-api-2.1.12.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-impl-2.1.12.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-xjc-2.1.12.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb1-impl-2.1.12.jar"/>
+	<classpathentry kind="lib" path="lib/jsr173_api-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.4.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy source folder &apos;sqljdbc4.jar&apos; to &apos;lib&apos;&#x0D;&#x0A;- Original project: &apos;connector&apos;&#x0D;&#x0A;- Destination element: &apos;lib&apos;&#x0D;&#x0A;- Original element: &apos;connector/lib/sqljdbc4.jar&apos;" description="Copy source folder" element1="/lib\/sqljdbc4.jar" flags="6" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyRoots" roots="1" stamp="1428526436334" target="/Validador_de_resultados/lib" version="1.0"/>
+</session>

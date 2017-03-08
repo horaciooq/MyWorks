@@ -1,0 +1,317 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/133/trunk/src/main/java/org/owasp/esapi/swingset/actions
+END
+IntegrityTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/IntegrityTutorial.java
+END
+ChangeSessionIdentifierSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/ChangeSessionIdentifierSecure.java
+END
+RichContentTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/RichContentTutorial.java
+END
+ChangePasswordInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/ChangePasswordInsecure.java
+END
+LoginInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/LoginInsecure.java
+END
+RandomnessInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/RandomnessInsecure.java
+END
+RandomizerInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/RandomizerInsecure.java
+END
+ObjectReferenceTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/ObjectReferenceTutorial.java
+END
+AccessControlSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/AccessControlSecure.java
+END
+EncodingTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/EncodingTutorial.java
+END
+XSSInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/133/trunk/src/main/java/org/owasp/esapi/swingset/actions/XSSInsecure.java
+END
+GUIDTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/GUIDTutorial.java
+END
+OutputUserInputInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/OutputUserInputInsecure.java
+END
+EncryptionTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/EncryptionTutorial.java
+END
+ValidateUserInputSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/ValidateUserInputSecure.java
+END
+LogoutSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/LogoutSecure.java
+END
+BrowserCachingTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/BrowserCachingTutorial.java
+END
+IntegritySecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/IntegritySecure.java
+END
+RichContentSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/RichContentSecure.java
+END
+ChangeSessionIdentifierInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/ChangeSessionIdentifierInsecure.java
+END
+ObjectReferenceSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/ObjectReferenceSecure.java
+END
+LoginTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/LoginTutorial.java
+END
+ChangePasswordTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/ChangePasswordTutorial.java
+END
+EncodingSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/EncodingSecure.java
+END
+RandomnessTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/RandomnessTutorial.java
+END
+RandomizerTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/RandomizerTutorial.java
+END
+GUIDSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/GUIDSecure.java
+END
+AccessControlInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/AccessControlInsecure.java
+END
+EncryptionSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/EncryptionSecure.java
+END
+XSSTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/133/trunk/src/main/java/org/owasp/esapi/swingset/actions/XSSTutorial.java
+END
+OutputUserInputTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/OutputUserInputTutorial.java
+END
+ValidateUserInputInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/ValidateUserInputInsecure.java
+END
+BrowserCachingSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/BrowserCachingSecure.java
+END
+LogoutInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/LogoutInsecure.java
+END
+Login.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/Login.java
+END
+IntegrityInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/IntegrityInsecure.java
+END
+RichContentInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/RichContentInsecure.java
+END
+ChangePasswordSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/ChangePasswordSecure.java
+END
+LoginSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/LoginSecure.java
+END
+RandomnessSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/RandomnessSecure.java
+END
+ChangeSessionIdentifierTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/ChangeSessionIdentifierTutorial.java
+END
+RandomizerSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/RandomizerSecure.java
+END
+ObjectReferenceInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/ObjectReferenceInsecure.java
+END
+EncodingInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/EncodingInsecure.java
+END
+XSSSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/133/trunk/src/main/java/org/owasp/esapi/swingset/actions/XSSSecure.java
+END
+OutputUserInputSecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/OutputUserInputSecure.java
+END
+GUIDInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/GUIDInsecure.java
+END
+AccessControlTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/AccessControlTutorial.java
+END
+EncryptionInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/EncryptionInsecure.java
+END
+ValidateUserInputTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/ValidateUserInputTutorial.java
+END
+LogoutTutorial.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/LogoutTutorial.java
+END
+BrowserCachingInsecure.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/123/trunk/src/main/java/org/owasp/esapi/swingset/actions/BrowserCachingInsecure.java
+END

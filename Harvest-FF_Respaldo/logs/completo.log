@@ -1,0 +1,13 @@
+2015/08/11 17:29:49 ERROR Imposible realizar la descarga revisar el comando ejecutado
+hco -b svrtransferad -en APOLO_B -st Desarrollo -cp C:\Harvest-FF\run\harvest -op pc -vp \ -br -replace all -to  -ced -eh C:\Harvest-FF\dfo\harvest.dfo -rm 15.157.31.220 -rport 1576 -er C:\Harvest-FF\dfo\remoto.dfo -s "*" 
+2015/08/11 17:40:25 INFO Descarga de Archvos Finalizada Proyecto: APOLO_B Paquete: APLB.15.08.06.1038 
+2015/08/11 17:40:28 INFO Limpieza del build APOLO_Bterminada 
+2015/08/11 17:46:56 INFO Traduccion de APOLO_B Realizada con exito 
+2015/08/12 11:45:45 INFO Limpieza del build APOLO_Bterminada 
+2015/08/12 11:57:45 INFO Traduccion de APOLO_B Realizada con exito 
+2015/08/12 12:48:19 INFO Limpieza del build APOLO_Bterminada 
+2015/08/12 14:08:29 INFO Limpieza del build APOLO_Bterminada 
+2015/08/12 14:13:03 INFO Traduccion de APOLO_B Realizada con exito 
+2015/08/12 15:49:27 INFO El escaneoAPOLO_B ha finalizado con exito 
+2015/08/12 15:49:39 ERROR no se pudieron cargar los resultados
+fortifyclient -url "http://15.128.27.55/ssc" -authtoken "2a7753b6-c64b-41c0-a725-0e92e6424721" uploadFPR -file "C:\Harvest-FF\run\harvest\APOLO_B\results.fpr" -project "APOLO_B" -version "integra" 

@@ -1,0 +1,129 @@
+package com.ss.ssc;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Properties;
+import java.util.Scanner;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
+import com.ca.harvest.jhsdk.hutils.JCaHarvestException;
+
+
+public class principal {
+
+	//private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+	private static Logger LOGGER = Logger.getLogger(principal.class);
+	public static void main(String[] args) {
+		 Properties props = new Properties();
+		   File i =new File("C:\\Harvest-FF\\config\\log4j.properties");
+		   InputStream is = null;
+		   
+		   try {
+			    is= new FileInputStream(i);
+			   props.load(is);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			finally {
+			    try {
+			        is.close();
+			    }
+			    catch (Exception e) {
+			        // ignore this exception
+			    }
+			}
+	      
+		   PropertyConfigurator.configure(props);
+		//MyLogger.setup();
+		// TODO Auto-generated method stub
+		int conteovulnerabilidades=0;
+		int conteofalsospositivos=0;
+		String cataux="";
+		String mensaje="<img src=https://www.owasp.org/images/5/5c/Fortify_logo.png></img><hr><br><br><h1>Reporte Fortify</h1><br><br><h2>";
+	String NoVulnerabilidades="<img src=https://www.owasp.org/images/5/5c/Fortify_logo.png		 ></img><hr><br><br><h1>Reporte Fortify</h1><br><br><br><br><h1>No se Encontraron Vulnerabilidades Nuevas </h1> ";
+		String adjunto=args[0]+"\\results.pdf";
+		String archivoxml=args[0]+"\\results.xml";
+		lecturaresultados lr =new lecturaresultados();
+		Object [] obj=lr.getResults(archivoxml, args[1], args[2],args[3]);
+		ArrayList categorias = (ArrayList) obj[0];
+		ArrayList vulnerabilidades = (ArrayList) obj[1];
+		simplemail simple =new simplemail();
+		  for(int X=0; X<vulnerabilidades.size();X++){
+				Vulnerabilidad vul =(Vulnerabilidad) vulnerabilidades.get(X);
+				if (vul.getEstado().equals("New")){
+					conteovulnerabilidades++;
+					if(vul.getAudit().equals("Not an Issue") && !vul.getComentario().equals("") && vul.getComentario()!=null){
+					conteofalsospositivos++;
+					}
+					if (!cataux.equals(vul.getCategoria())){
+						for(int x=0;x<categorias.size();x++){
+							Categoria cat = (Categoria) categorias.get(x);
+							if(cat.getNombre().equals(vul.getCategoria())){							
+								mensaje=mensaje+cat.getNombre()+"</h2><br><br>";
+								Scanner scan = new Scanner (cat.getMetaInfo());
+								while(scan.hasNext()){
+									mensaje=mensaje+scan.nextLine()+"<br>";
+								}
+								mensaje=mensaje+"<br><br>";	
+							}
+						}
+						cataux=vul.getCategoria();
+					}			
+						mensaje=mensaje+"<table border =\"1\" style=\"width:70%\"><tr><th bgcolor=\"#FF0000\" colspan=\"2\">"+vul.getsinkLocalizacion()+"     "+vul.getsinkLinea();
+						mensaje=mensaje+"</th></tr><tr><td>Instancia: "+vul.getInstanceid()+"</td><td>"+vul.getEstado()+"</td></tr>";
+						Scanner sc = new Scanner(vul.getAbstracto());
+						mensaje=mensaje+"<tr><td colspan=\"2\"> Abstracto: ";
+						while(sc.hasNext()){
+							String st=sc.nextLine();						
+							mensaje=mensaje+st+"<br>";
+						}
+						sc.close();
+						mensaje=mensaje+"</td></tr>";
+						if(vul.getsourceLocalizacon()!=null){
+							mensaje=mensaje+"<tr><td colspan=\"2\">Source: \n" + vul.getsourceLocalizacon()+"   "+vul.getsourceLinea()+"</td></tr>";
+							Scanner leer = new Scanner(vul.getsourceSnippet());
+							mensaje=mensaje+"<tr><td colspan=\"2\">";
+							while(leer.hasNext()){
+							mensaje=mensaje+leer.nextLine()+"<br>";
+							}
+							leer.close();
+							mensaje=mensaje+"</td></tr>";
+						}
+						mensaje=mensaje+"<tr><td colspan=\"2\">Sink: \n"+ vul.getsinkLocalizacion()+"   "+vul.getsinkLinea()+"</td></tr>";
+						mensaje=mensaje+"<tr><td colspan=\"2\">";
+						Scanner leer= new Scanner(vul.getsinkSnippet());
+						while(leer.hasNext()){
+							mensaje=mensaje+leer.nextLine()+"<br>";
+						}
+						leer.close();
+						mensaje=mensaje+"</td></tr>";
+						mensaje=mensaje+"<tr><td width=\"50%\">Analysis: "+vul.getAudit()+"</td><td>Comentario: "+vul.getComentario()+"</td></tr></table>";					
+				}
+			}
+		try {
+			harvestform hf= new harvestform();
+			if(conteovulnerabilidades!=0){
+				simple.SendMail(mensaje, adjunto, args[5]);					
+				if(conteofalsospositivos==conteovulnerabilidades){	
+					
+					hf.modificaForm(args[4], "Aprobado");
+				}else{
+					hf.modificaForm(args[4], "No Aprobado");
+				}
+				
+			}else{
+				hf.modificaForm(args[4], "Aprobado");
+				simple.SendMail(NoVulnerabilidades, adjunto, args[5]);
+			}
+		} catch (JCaHarvestException e) {
+			// TODO Auto-generated catch block
+			LOGGER.warn(e.getMessage());
+		}
+		
+	}
+}

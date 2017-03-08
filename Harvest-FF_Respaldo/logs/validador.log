@@ -1,0 +1,10 @@
+oct 06, 2015 1:22:42 PM principal main
+WARNING: E03090054: ERROR: Invalid Key.
+nov 03, 2015 6:00:57 PM lecturaresultados getResults
+WARNING: C:\Harvest-FF\run\usd_BEC_B\results.xml (El sistema no puede encontrar la ruta especificada)
+nov 05, 2015 12:14:32 PM lecturaresultados getResults
+WARNING: C:\Harvest-FF\run\results.xml (El sistema no puede encontrar el archivo especificado)
+nov 05, 2015 1:01:34 PM lecturaresultados getResults
+WARNING: C:\Harvest-FF\run\BEC_Busd_BEC_B\results.xml (El sistema no puede encontrar la ruta especificada)
+nov 05, 2015 1:01:39 PM principal main
+WARNING: E03090054: ERROR: Invalid Key.

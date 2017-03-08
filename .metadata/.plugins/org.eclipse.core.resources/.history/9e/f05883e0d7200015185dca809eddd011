@@ -1,0 +1,62 @@
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Properties;
+import java.util.Scanner;
+
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import 
+javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+import javax.swing.JOptionPane;
+public class simplemail  {
+	public void SendMail(String mensaje, String archivo, String To) {
+		final String Username="horaciooq@yahoo.com.mx";
+		final String PassWord="Xeon2015?";
+		String Subject="Reporte Fortify";
+        Properties props = new Properties();
+        //props.put("mail.smtp.auth", "true");
+        //props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", "15.128.4.37");
+        props.put("mail.smtp.port", "25");
+        Session session = Session.getInstance(props/*,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(Username, PassWord);
+                    }
+                }*/);
+
+        try {
+
+        	Message message = new MimeMessage(session);
+			message.setFrom(new InternetAddress("horaciooq@yahoo.com.mx"));
+			message.setRecipients(Message.RecipientType.TO,
+				InternetAddress.parse(To));
+			message.setSubject(Subject);
+			BodyPart cuerpoMensaje = new MimeBodyPart();
+			cuerpoMensaje.setContent(mensaje, "text/html");
+			Multipart multiparte = new MimeMultipart();
+			multiparte.addBodyPart(cuerpoMensaje);
+			cuerpoMensaje = new MimeBodyPart();
+	        String nombreArchivo = archivo;
+	        DataSource fuente = new FileDataSource(nombreArchivo);
+	        cuerpoMensaje.setDataHandler(new DataHandler(fuente));
+	        cuerpoMensaje.setFileName("results.pdf");
+	        multiparte.addBodyPart(cuerpoMensaje);
+	        message.setContent(multiparte);
+			Transport.send(message);
+ 
+			System.out.println("Done");
+
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+}

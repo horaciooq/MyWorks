@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Validador_de_resultados&apos;" deleteContents="true" description="Delete resource &apos;Validador_de_resultados&apos;" element1="/Validador_de_resultados" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1439329032510"/>
+</session>

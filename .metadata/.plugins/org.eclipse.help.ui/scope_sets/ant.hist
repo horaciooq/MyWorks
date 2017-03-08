@@ -1,0 +1,4 @@
+#Fri Jan 16 18:04:23 CST 2015
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=ant

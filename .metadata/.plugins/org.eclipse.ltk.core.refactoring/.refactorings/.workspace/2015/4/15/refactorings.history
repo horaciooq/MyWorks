@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;HarvestIntagrationPlugin&apos;" deleteContents="true" description="Delete resource &apos;HarvestIntagrationPlugin&apos;" element1="/HarvestIntagrationPlugin" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1428351762634"/>
+</session>

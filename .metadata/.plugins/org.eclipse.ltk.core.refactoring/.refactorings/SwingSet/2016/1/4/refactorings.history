@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 packages to &apos;pruebasseguridad/src&apos;&#x0D;&#x0A;- Original project: &apos;SwingSet&apos;&#x0D;&#x0A;- Destination element: &apos;pruebasseguridad/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     SwingSet/src/org.owasp.esapi.setup&#x0D;&#x0A;     SwingSet/src/org.owasp.esapi.swingset.login&#x0D;&#x0A;     SwingSet/src/org.owasp.esapi.swingset.actions&#x0D;&#x0A;     SwingSet/src/org.owasp.esapi.swingset" description="Copy packages" destination="=pruebasseguridad/src" element1="/src&lt;org.owasp.esapi.setup" element2="/src&lt;org.owasp.esapi.swingset.login" element3="/src&lt;org.owasp.esapi.swingset.actions" element4="/src&lt;org.owasp.esapi.swingset" flags="589830" fragments="4" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1453133721792" version="1.0"/>
+</session>

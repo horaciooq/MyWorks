@@ -1,0 +1,166 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Random;
+import java.awt.*;
+
+import  javax.swing.*;
+import java.beans.*;
+
+public class Ventana extends JFrame implements ActionListener , 
+PropertyChangeListener {
+	final JButton jbEjecutar = new  JButton("Ejecutar");
+	 private JProgressBar progressBar;
+	 private Task task;
+	
+	private static final long serialVersionUID = 1L;
+	public Ventana() {
+        initComponents(); }
+	
+	private void initComponents() {
+		final JLabel JlNombre = new  JLabel ("paquete");		
+		final JLabel jlLenguaje = new  JLabel ("Lenguaje");
+		final JComboBox jcLenguaje = new  JComboBox();
+		final JLabel jlJDK = new  JLabel ("JDK");
+		final JComboBox jcJDK = new  JComboBox();
+		final JLabel jlMemoria = new  JLabel ("Memoria");
+		final JComboBox jcMemoria = new  JComboBox();
+		final JLabel jlSQL = new  JLabel ("SQL");
+		final JComboBox jcSQL = new  JComboBox();
+		
+		final JPanel panelsuperior = new JPanel();
+		final JPanel panelinferior = new JPanel ();
+		
+		panelsuperior.setBounds(30, 30, 340, 380);
+		panelsuperior.setLayout(null);
+        panelsuperior.add(JlNombre);
+        JlNombre.setBounds(0, 0,340, 20);        
+        panelsuperior.add(jlLenguaje);
+        jlLenguaje.setBounds(0, 30,80, 20);
+        panelsuperior.add(jcLenguaje);
+        jcLenguaje.addItem("Java");
+        jcLenguaje.setBounds(80, 30,260, 20);
+        panelsuperior.add(jlJDK);
+        jlJDK.setBounds(0, 60,80, 20);
+        panelsuperior.add(jcJDK);
+        jcJDK.addItem("1.4");
+        jcJDK.addItem("1.5");
+        jcJDK.addItem("1.6");
+        jcJDK.addItem("1.7");
+        jcJDK.setBounds(80, 60,80, 20);
+        panelsuperior.add(jlSQL);
+        jlSQL.setBounds(0, 90,80, 20);
+        panelsuperior.add(jcSQL);
+        jcSQL.addItem("TSQL");
+        jcSQL.addItem("PLSQL");
+        jcSQL.setBounds(80, 90,80, 20);        
+        panelsuperior.add(jlMemoria);
+        jlMemoria.setBounds(0, 120,80, 20);        
+        panelsuperior.add(jcMemoria);
+        jcMemoria.addItem("600M");
+        jcMemoria.addItem("1200M");
+        jcMemoria.addItem("2048M");
+        jcMemoria.addItem("4096M");
+        jcMemoria.addItem("8192M");
+        jcMemoria.setBounds(80, 120,80, 20);   
+        progressBar = new JProgressBar(0, 100);
+        progressBar.setValue(0);
+        progressBar.setStringPainted(true);
+        panelsuperior.add(progressBar);
+        progressBar.setBounds(10, 140, 100, 20);
+      
+        
+        panelinferior.setBounds(200, 420,140 , 50);
+        panelinferior.setBorder(BorderFactory.createDashedBorder(null, RIGHT_ALIGNMENT, 1));
+        panelinferior.setLayout(null);
+        panelinferior.add(jbEjecutar);
+        jbEjecutar.setBounds(10,10,100,30);
+        getContentPane().add(panelsuperior);
+		getContentPane().add(panelinferior);
+		
+		jbEjecutar.addActionListener(this);
+		jcMemoria.addActionListener(this);
+		/*Definimos la ubiación de nuestra ventana */
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds((screenSize.width-400)/2, (screenSize.height-500)/2, 400, 500);
+        
+        /* Declaramos que nuestra ventana se cierre al dar clic en X*/
+        setDefaultCloseOperation( WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+        getContentPane().setLayout(null);
+        
+        
+				
+	}
+	
+	class Task extends SwingWorker<Void, Void> {
+        /*
+         * Main task. Executed in background thread.
+         */
+        @Override
+        public Void doInBackground() throws IOException {
+            Random random = new Random();
+            int progress = 0;
+            //Initialize progress property.
+            setProgress(0);
+            while (progress < 100) {
+            	
+                //Sleep for up to one second.
+            	
+                try {
+                    //Thread.sleep(random.nextInt(1000));
+                    Runtime.getRuntime().exec("sourceanalyzer");
+                } catch (IOException ignore) {}
+                //Make random progress.
+                progress += random.nextInt(10);
+                setProgress(Math.min(progress, 100));
+            }
+            return null;
+        }}
+
+	public void propertyChange(PropertyChangeEvent evt) {
+        if ("progress" == evt.getPropertyName()) {
+            int progress = (Integer) evt.getNewValue();
+            progressBar.setValue(progress);
+            
+        } 
+    }
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+        //Instances of javax.swing.SwingWorker are not reusuable, so
+        //we create new instances as needed.
+        task = new Task();
+        task.addPropertyChangeListener(this);
+        task.execute();
+		// TODO Auto-generated method stub
+		//System.out.println(e.paramString());
+		/*byte [] buffer=new byte [1024];	
+		int leido=0;
+		if(e.getSource()==jbEjecutar){
+			try {
+				String [] cmd ={"sourceanalyzer"};
+			Process process = Runtime.getRuntime().exec(cmd);
+			InputStream inputstream = process.getInputStream();
+			BufferedInputStream bis = new BufferedInputStream(inputstream);				
+			while((leido=bis.read(buffer))!=-1){
+				
+				String str=new String(buffer,0,leido);
+				System.out.println(str);
+				
+			}
+		}catch (IOException ex){
+			System.out.println(ex.getMessage()+"hello");
+		}
+		}*/
+		
+		
+	}
+
+
+}

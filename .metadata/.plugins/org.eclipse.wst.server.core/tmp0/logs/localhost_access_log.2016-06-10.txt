@@ -1,0 +1,9 @@
+127.0.0.1 - - [10/Jun/2016:16:39:25 -0500] "GET / HTTP/1.1" 404 1004
+0:0:0:0:0:0:0:1 - - [10/Jun/2016:16:41:27 -0500] "GET / HTTP/1.1" 404 1004
+0:0:0:0:0:0:0:1 - - [10/Jun/2016:16:43:28 -0500] "GET /pruebasseguridad/pathmanipulation.jsp HTTP/1.1" 500 3056
+0:0:0:0:0:0:0:1 - - [10/Jun/2016:16:43:49 -0500] "GET /pruebasseguridad/pathmanipulation.jsp?id=1 HTTP/1.1" 200 266
+127.0.0.1 - - [10/Jun/2016:17:53:22 -0500] "GET / HTTP/1.1" 404 1004
+0:0:0:0:0:0:0:1 - - [10/Jun/2016:17:53:25 -0500] "GET /pruebasseguridad/xssreflejado.jsp HTTP/1.1" 500 2956
+0:0:0:0:0:0:0:1 - - [10/Jun/2016:17:53:35 -0500] "GET /pruebasseguridad/xssreflejado.jsp?nom?heloo HTTP/1.1" 500 2956
+0:0:0:0:0:0:0:1 - - [10/Jun/2016:17:53:49 -0500] "GET /pruebasseguridad/xssreflejado.jsp?nom=heloo HTTP/1.1" 200 304
+0:0:0:0:0:0:0:1 - - [10/Jun/2016:17:56:33 -0500] "GET /pruebasseguridad/xssreflejado.jsp?nom=heloo HTTP/1.1" 200 331

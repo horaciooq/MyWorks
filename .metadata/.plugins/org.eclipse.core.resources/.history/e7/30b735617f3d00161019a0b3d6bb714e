@@ -1,0 +1,25 @@
+sub leerarchivos {
+    my $path = shift;
+    opendir (DIR, $path."\\codigo") or die "No se puede abrir el $path: $!";
+    print $path."\\codigo";
+    print $a=readdir (DIR);
+    my @files = grep  readdir (DIR);
+    closedir (DIR);
+    for (@files) {
+      if(-f $_){
+      	my $filename = $path."\\codigo\\".$_;
+      	print $filename;
+		my $filenametmp= $path."\\tmp\\".$_;
+		print $filenametmp;
+		open(my $fh,$filename) or die "Could not open file '$filename' $!";
+		open(my $fw,">> $filenametmp") or die "Could not open file '$filenametmp' $!";
+		while (my $row = <$fh>) {
+		  chomp $row;
+		  substr($row,0,6,"      ");
+		  print $fw "$row\n";
+		}
+              }
+      }      
+    }
+    
+&leerarchivos ('C:\Users\SMARTSOL 20\Desktop\Cobol');

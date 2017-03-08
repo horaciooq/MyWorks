@@ -1,0 +1,55 @@
+
+<%@page import="org.owasp.esapi.*"%>
+<%@page import="org.owasp.esapi.errors.*"%>
+<%@page import="org.owasp.esapi.AccessReferenceMap"%>
+<%@page import="org.owasp.esapi.codecs.*" %>
+
+<%
+String function = (String)request.getAttribute("function");
+String title = "ESAPI SwingSet - " + function;
+String querystring = request.getQueryString();
+String pageHeader = "ESAPI Swingset - " + function;
+
+int i1 = querystring.indexOf("&secure");
+boolean secure = ( i1 != -1 );
+if ( secure ) {
+	querystring = querystring.substring( 0, i1 );
+	title += ": Secured by ESAPI";
+	pageHeader += ": Secured by ESAPI";
+}
+
+int i2 = querystring.indexOf("&insecure");
+boolean insecure = ( i2 != -1 );
+if ( insecure ) {
+	querystring = querystring.substring( 0, i2 );
+	title += ": Insecure";
+	pageHeader += ": Insecure";
+}
+
+%>
+
+<html>
+<head>
+<title><%=title%></title>
+<link rel="stylesheet" type="text/css" href="style/style.css" />
+
+</head>
+
+<% if ( !insecure && !secure ) { %> <body> <% } %>
+<% if ( insecure ) { %> <body bgcolor="#EECCCC"> <% } %>
+<% if ( secure ) { %> <body bgcolor="#BBDDBB"> <% } %>
+<div id="container">
+	<div id="holder">
+		<div id="logo"><img src="style/images/owasp-logo_130x55.png" width="130" height="55" alt="owasp_logo" title="owasp_logo"></div>
+<h2><%=pageHeader %></h2>
+
+<div id="navigation">
+<a href="main">Home</a> | 
+<% if ( !secure && !insecure ) { %><b><%}%><a href="main?<%=querystring%>">Tutorial</a><% if ( !secure && !insecure ) { %></b><%} %> | 
+<% if ( insecure ) { %><b><%}%><a href="main?<%=querystring%>&insecure">Insecure Demo</a><% if ( insecure ) { %></b><%} %> | 
+<% if ( secure ) { %><b><%}%><a href="main?<%=querystring%>&secure">Secure Demo</a><% if ( secure ) { %></b><%} %>
+</div>
+<div id="header"></div>
+<p>
+<hr>
+
